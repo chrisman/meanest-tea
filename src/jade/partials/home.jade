@@ -1,1 +1,57 @@
 h3 home
+
+.options
+  .options_left
+    span Search by category
+    select
+      option(ng-repeat='c in categories') {{ c }}
+    span Search by name
+    input(type='text' ng-model='tea.name_search')
+  .options_right
+    button.btn.btn-danger Checkout | Bag empty!
+
+.catalog
+  table
+    thead
+      th Tea
+      th Information
+      th Sort by price
+        select
+          option Highest
+          option Lowest
+    tbody
+      tr(ng-repeat='t in teas')
+        td
+          img(src='{{t.imageUrl}}')
+        td
+          h5 {{ t.name }}
+          li 
+            strong Price
+            span {{ t.price / 100 | currency }}
+          li 
+            strong Caffeine Scales
+            span {{ t.caffeineScale }}
+          li 
+            strong Rating
+            span {{ t.rating }}
+          li 
+            strong In Stock?
+            span {{ t.inStock }}
+          li 
+            strong Rating
+            ul
+              li(ng-repeat='c in t.categories') {{ c }}
+        td
+          h5 Quantity
+          select
+            option
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6
+            option 7
+            option 8
+            option 9
+            option 10
+          button.btn.btn-warning Add To Bag
