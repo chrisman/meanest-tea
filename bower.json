@@ -1,0 +1,27 @@
+{
+  "name": "movies",
+  "authors": [
+    "Christopher Brown <christopher.p.brown@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests",
+    "app/vendor"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.0",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}
