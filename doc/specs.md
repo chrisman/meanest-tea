@@ -1,6 +1,5 @@
 ## backlog ##
 
-* User can sort teas by price: High to low, and Low to high
 * User can choose Quantity via drop down number list
 * User can use Add to bag button to add tea to bag
 * New items added to bag default to qty of 1, if no qty is selected
@@ -21,3 +20,4 @@
 * User can see a Table with column for image, and tea information
 * User can Search by name
 * User can Search by category with drop down list
+* User can sort teas by price: High to low, and Low to high

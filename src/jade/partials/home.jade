@@ -4,6 +4,7 @@ h3 home
   .options_left
     span Search by category
     select(ng-model='search_by.categories')
+      option
       option(ng-repeat='c in categories') {{ c }}
     span Search by name
     input(type='text' ng-model='search_by.name')
@@ -16,12 +17,12 @@ h3 home
       th Tea
       th Information
       th Sort by price
-        select
+        select(ng-model='tea.cost')
           option
-          option Highest
-          option Lowest
+          option(value='-price') Highest
+          option(value='price') Lowest
     tbody
-      tr(ng-repeat='t in teas | filter:search_by')
+      tr(ng-repeat='t in teas | filter:search_by | orderBy:tea.cost ')
         td
           img(src='{{t.imageUrl}}')
         td
