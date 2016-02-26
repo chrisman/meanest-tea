@@ -7,7 +7,7 @@ app.service('TeaService', function(){
           ingredients: "concentrated gluten, jewelry, dill, beetle nut, toast",
           caffeineScale: 244,
           price: 1540,
-          inStock: true,
+          inStock: false,
           rating: 1,
           imageUrl: "http://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$",
           __v: 0,

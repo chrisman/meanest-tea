@@ -27,7 +27,7 @@ h3 home
           h5 {{ t.name }}
           li 
             strong Price
-            span {{ t.price / 100 | currency }}
+            span {{ t.price | cb_monetize }}
           li 
             strong Caffeine Scales
             span {{ t.caffeineScale }}
@@ -36,7 +36,7 @@ h3 home
             span {{ t.rating }}
           li 
             strong In Stock?
-            span {{ t.inStock }}
+            span {{ t.inStock | cb_assertTrue }}
           li 
             strong Rating
             ul
