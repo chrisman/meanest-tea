@@ -1,3 +1,4 @@
+// TODO create /src/js, and browserify that shiz
 var app = angular.module('chrisbrown', ['ngRoute']);
 
 

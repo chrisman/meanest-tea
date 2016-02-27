@@ -21,6 +21,7 @@
           option(value='-price') Highest
           option(value='price') Lowest
     tbody
+      //- TODO re-write as cb-teawidget directive
       tr(ng-repeat='t in teas | filter:search_by | orderBy:tea.cost ')
         td
           img(src='{{t.imageUrl}}')

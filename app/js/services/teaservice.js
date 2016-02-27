@@ -1,3 +1,4 @@
+// TODO rewrite as $http.get request
 app.service('TeaService', function(){
 
   var tea_data = [
