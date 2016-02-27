@@ -1,6 +1,5 @@
 ## backlog ##
 
-* The user can use Checkout button to go to checkout page
 * Checkout/bag starts empty, then updates with number of items
 * Checkout page has Order total
 * Checkout page Lists each item that was added from the previous page, and includes its quantity
@@ -21,3 +20,4 @@
 * User can choose Quantity via drop down number list
 * User can use Add to bag button to add tea to bag
 * New items added to bag default to qty of 1, if no qty is selected
+* The user can use Checkout button to go to checkout page
