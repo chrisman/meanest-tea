@@ -17,16 +17,14 @@ app.controller('CartController', [
     .map(toSubtotals)
     .reduce(toTotal);
   }
-  var updateCart = function(i){
-    i = CartService.editItem(i);
+  $scope.updateCart = function(i){
+    i.is_editing = !i.is_editing;
+    CartService.editItem(i);
+    $scope.cart.cart = CartService.listItems();
     $scope.cart.total = getCartTotal();
   }
-  // cart partial not hitting this function
   $scope.removeItem = function(i){
-    console.log('before removal', CartService.listItems());
     CartService.removeItem(i);
-    console.log('after removal', CartService.listItems());
-
     $scope.cart.cart = CartService.listItems();
     $scope.cart.total = getCartTotal();
   }
