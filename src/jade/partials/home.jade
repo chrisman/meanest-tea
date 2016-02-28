@@ -21,32 +21,4 @@
           option(value='-price') Highest
           option(value='price') Lowest
     tbody
-      //- TODO re-write as cb-teawidget directive
-      tr(ng-repeat='t in teas | filter:search_by | orderBy:tea.cost ')
-        td
-          img(src='{{t.imageUrl}}')
-        td
-          h5 {{ t.name }}
-          li 
-            strong Price
-            span {{ t.price | cb_monetize }}
-          li 
-            strong Caffeine Scales
-            span {{ t.caffeineScale }}
-          li 
-            strong Rating
-            span {{ t.rating }}
-          li 
-            strong In Stock?
-            span {{ t.inStock | cb_assertTrue }}
-          li 
-            strong Rating
-            ul
-              li(ng-repeat='c in t.categories') {{ c }}
-        td
-          h5 Quantity
-          select(ng-model='t.qty')
-            option
-            each val in [2, 3, 4, 5, 6, 7, 8, 9, 10]
-              option(value=val)= val
-          button.btn.btn-warning(ng-click='cart.addItem(t)') Add To Bag
+      tr(ng-repeat='t in teas | filter:search_by | orderBy:tea.cost ' cb-teawidget='t')
