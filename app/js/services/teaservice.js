@@ -3,7 +3,6 @@ app.service('TeaService', function($http){
   var tea_data = [];
   $http.get('/js/data.js').then( r => {
     tea_data = r.data;
-    console.log(tea_data);
   } );
 
   return {

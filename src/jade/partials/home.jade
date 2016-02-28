@@ -21,4 +21,4 @@
           option(value='-price') Highest
           option(value='price') Lowest
     tbody
-      tr(ng-repeat='t in teas | filter:search_by | orderBy:tea.cost ' cb-teawidget='t')
+      tr(ng-repeat='t in teas | filter:search_by | orderBy:tea.cost ' cb-teawidget='t' cart='cart')
