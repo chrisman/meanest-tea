@@ -15,7 +15,6 @@ app.controller('MainController', [
   $scope.cart.qty = getCartQty();
 
   $scope.cart.addItem = function(i){
-    console.log('ADDING ITEM');
     i.qty = i.qty || 1;
     CartService.addItem(i);
     $scope.cart.qty = getCartQty();

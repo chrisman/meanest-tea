@@ -1,7 +1,6 @@
 // TODO create /src/js, and browserify that shiz
 var app = angular.module('chrisbrown', ['ngRoute']);
 
-
 app.config(function($routeProvider, $locationProvider){
   $routeProvider
     .when('/', {
@@ -18,7 +17,6 @@ app.config(function($routeProvider, $locationProvider){
     .when('/contact', {
       templateUrl: 'partials/contact.html',
     })
-
 
   $locationProvider.html5Mode(true);
 });
