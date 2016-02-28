@@ -1,0 +1,35 @@
+.options
+  h3 My Shopping Bag
+  h3 Order total: {{ cart.total | cb_monetize }}
+
+.cart
+  table
+    thead
+      tr
+        th Product
+        th Quantity
+        th Sub-total
+        th
+    tbody
+      tr(ng-repeat='item in cart.cart')
+        td
+          h2 {{ item.name }} 
+          img(src='{{ item.imageUrl }}')
+          li
+            strong Caffeine Scale: 
+            span {{ item.caffeineScale }}
+          li
+            strong Ingredients:
+            span {{ item.ingredients }}
+          li
+            strong Rating:
+            span {{ item.rating }}
+        td 
+          input(ng-init='is_editing=false' type='number' ng-show='is_editing' ng-model='item.qty')
+          span(ng-show='!is_editing') {{ item.qty }}
+        td  
+          {{ item.price * item.qty | cb_monetize }}
+        td
+          button.btn.btn-warning(ng-show='is_editing' ng-click='is_editing = !is_editing') Save
+          button.btn.btn-warning(ng-show='!is_editing') Edit
+          button.btn.btn-danger Remove
