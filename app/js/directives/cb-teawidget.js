@@ -1,20 +1,18 @@
-app.directive('cbTeawidget', function(){
+// TODO how inject cartservice ... MainController?
+app.directive('cbTeawidget', [function(){
   return {
     restrict: 'EA',
     controller: function($scope){
       // control things
+      console.log($scope);
     },
     link: function(scope, element, attrs){
-      element.on('click', function(){
-        alert('clickkkk');
-      });
+      // do stuff
     },
     templateUrl: 'templates/teawidget.html',
     scope: {
-      // TDs are known to be messed up:
-      // http://stackoverflow.com/questions/18600710/angularjs-ng-repeat-with-custom-element-inside-a-table-is-rendering-strangely
       tea: '=cbTeawidget'
     }
 
   };
-});
+}]);

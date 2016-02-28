@@ -1,5 +1,8 @@
+//- THUMBNAIL
 td
   img(src='{{tea.imageUrl}}')
+
+//- DETAILS
 td
   h5 {{ tea.name }}
   li 
@@ -18,10 +21,12 @@ td
     strong Rating
     ul
       li(ng-repeat='c in tea.categories') {{ c }}
+
+//- METHODS
 td
   h5 Quantity
   select(ng-model='tea.qty')
     option
     each val in [2, 3, 4, 5, 6, 7, 8, 9, 10]
       option(value=val)= val
-  button.btn.btn-warning(ng-click='cartea.addItem(t)') Add To Bag
+  button.btn.btn-warning(ng-click='cart.addItem(t)') Add To Bag
