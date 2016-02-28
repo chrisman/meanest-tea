@@ -1,7 +1,6 @@
 ## backlog ##
 
 * Checkout page has Order total
-* Checkout page Lists each item that was added from the previous page, and includes its quantity
 * Checkout page has Ability to edit quantity
 * Checkout page : Editing quantity updates the sub-total and order total
 * Checkout page has Ability to remove a product, which then updates the order total
@@ -21,3 +20,4 @@
 * New items added to bag default to qty of 1, if no qty is selected
 * The user can use Checkout button to go to checkout page
 * on home page, Checkout/bag starts empty, then updates with number of items
+* Checkout page Lists each item that was added from the previous page, and includes its quantity
