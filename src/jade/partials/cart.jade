@@ -1,10 +1,6 @@
 .options
   h3 My Shopping Bag
-  h3 Order total: {{ cart.total }}
-
-.debug
-  h1 debug
-  {{ cart }}
+  h3 Order total: {{ cart.total | cb_monetize }}
 
 .cart
   table

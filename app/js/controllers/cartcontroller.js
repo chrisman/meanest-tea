@@ -6,10 +6,23 @@ app.controller('CartController', [
     return CartService.listItems().length;
   }
 
+  var toSubtotals = function(item) {
+    return item.price * item.qty;
+  }
+  var toTotal = function(acc, curr) {
+    return acc + curr;
+  }
+  var getCartTotal = function(){
+    return CartService.listItems()
+    .map(toSubtotals)
+    .reduce(toTotal);
+  }
+
   $scope.tea = {};
   $scope.cart = {};
   
   $scope.cart.qty = getCartQty();
+  $scope.cart.total = getCartTotal();;
 
   $scope.cart.cart = CartService.listItems();  
 
