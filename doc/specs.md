@@ -3,7 +3,6 @@
 * Checkout page has Ability to edit quantity
 * Checkout page : Editing quantity updates the sub-total and order total
 * Checkout page has Ability to remove a product, which then updates the order total
-* Checkout page : Items in checkout show the caffeine scale, ingredients, rating, and sub-total
 
 ## done ##
 
@@ -21,3 +20,4 @@
 * on home page, Checkout/bag starts empty, then updates with number of items
 * Checkout page Lists each item that was added from the previous page, and includes its quantity
 * Checkout page has Order total
+* Checkout page : Items in checkout show the caffeine scale, ingredients, rating, and sub-total
