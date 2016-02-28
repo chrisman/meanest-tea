@@ -24,8 +24,11 @@
           li
             strong Rating:
             span {{ item.rating }}
-        td {{ item.qty }}
-        td {{ item.price * item.qty | cb_monetize }}
         td 
-          button.btn.btn-warning Edit
-          button.btn.btn-danger Remove
+          input(ng-init='is_editing=false' type='number' ng-show='is_editing' ng-model='item.qty')
+          span(ng-show='!is_editing') {{ item.qty }}
+        td {{ item.price * item.qty | cb_monetize }}
+        td
+          button.btn.btn-warning(ng-show='is_editing' ng-click='is_editing = !is_editing') Save
+          button.btn.btn-warning(ng-show='!is_editing' ng-click='is_editing = !is_editing') Edit
+          button.btn.btn-danger(ng-click='removeItem(item)') Remove

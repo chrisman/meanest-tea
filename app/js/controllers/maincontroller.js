@@ -1,4 +1,3 @@
-// TODO fix item.qty. i need it to persist in shopping carst
 app.controller('MainController', [
   '$scope', 'TeaService', 'CartService',
   function($scope, TeaService, CartService){

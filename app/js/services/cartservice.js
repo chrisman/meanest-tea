@@ -15,10 +15,13 @@ app.service('CartService', function(){
     // UPDATE //
     editItem: function(i){
       console.log('update', i);
+      return i;
     },
     // DELETE //
     removeItem: function(i){
-      console.log('delete', i);
+      cart = cart.filter( o => {
+        return o._id !== i._id;
+      });
     }
   }
 });
