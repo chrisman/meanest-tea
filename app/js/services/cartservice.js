@@ -1,3 +1,5 @@
+// CartService - a sad little service that didn't end up doing very much
+
 app.service('CartService', function(){
 
   var cart = [];
@@ -6,7 +8,6 @@ app.service('CartService', function(){
     // CREATE //
     addItem: function(i){
       cart.push(i);
-      console.log('add', i);
     },
     // READ //
     listItems: function(){
