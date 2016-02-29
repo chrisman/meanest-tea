@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var pages = require('gulp-gh-pages');
 
-gulp.task('pages', () => {
+gulp.task('deploy', () => {
   return gulp.src('app/**/*')
     .pipe(pages());
 });
